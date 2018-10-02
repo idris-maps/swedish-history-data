@@ -37,20 +37,31 @@ interface PersonRegent {
 
 source [wikipedia](https://sv.wikipedia.org/wiki/Lista_%C3%B6ver_Sveriges_regenter)
 
-### `places.gardaRike`
+### `places.balticCities`
 
 A GeoJSON FeatureCollection
 
 ```typescript
-interface PlacesGardarikeProperties {
+interface PlacesBalticCitiesProperties {
   name: string
-  wikipedia: Wikipedia
+  alternativeNames?: {
+    fromYear: number
+    toYear: number | null
+    value: string
+  }[]
+  partOf: {
+    fromYear: number
+    toYear: number | null
+    de: string
+    en: string
+    sv: string
+  }[]
 }
 
-type PlacesGardarikeFeature = Feature<PlacesGardarikeProperties, PointGeometry>
+type PlacesBalticCitiesFeature = Feature<PlacesBalticCitiesProperties, PointGeometry>
 ```
 
-source [wikipedia](https://en.wikipedia.org/wiki/Gar%C3%B0ar%C3%ADki)
+source [baltictowns.com](http://www.baltictowns.com/portal/e_index.html)
 
 ### `places.goldCoast`
 
@@ -84,28 +95,17 @@ type PlacesNewSwedenFeature = Feature<PlacesNewSwedenProperties, PointGeometry>
 
 source [wikipedia](https://en.wikipedia.org/wiki/New_Sweden)
 
-### `places.balticCities`
+### `places.gardaRike`
 
 A GeoJSON FeatureCollection
 
 ```typescript
-interface PlacesBalticCitiesProperties {
+interface PlacesGardarikeProperties {
   name: string
-  alternativeNames?: {
-    fromYear: number
-    toYear: number | null
-    value: string
-  }[]
-  partOf: {
-    fromYear: number
-    toYear: number | null
-    de: string
-    en: string
-    sv: string
-  }[]
+  wikipedia: Wikipedia
 }
 
-type PlacesBalticCitiesFeature = Feature<PlacesBalticCitiesProperties, PointGeometry>
+type PlacesGardarikeFeature = Feature<PlacesGardarikeProperties, PointGeometry>
 ```
 
-source [baltictowns.com](http://www.baltictowns.com/portal/e_index.html)
+source [wikipedia](https://en.wikipedia.org/wiki/Gar%C3%B0ar%C3%ADki)
