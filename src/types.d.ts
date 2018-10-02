@@ -77,6 +77,26 @@ interface PlacesNewSwedenProperties {
 
 type PlacesNewSwedenFeature = Feature<PlacesNewSwedenProperties, PointGeometry>
 
+// places - baltic cities
+
+interface PlacesBalticCitiesProperties {
+  name: string
+  alternativeNames?: {
+    fromYear: number
+    toYear: number | null
+    value: string
+  }[]
+  partOf: {
+    fromYear: number
+    toYear: number | null
+    de: string
+    en: string
+    sv: string
+  }[]
+}
+
+type PlacesBalticCitiesFeature = Feature<PlacesBalticCitiesProperties, PointGeometry>
+
 // index
 
 interface SweHistory {
@@ -84,6 +104,7 @@ interface SweHistory {
     gardaRike: FeatureCollection<PlacesGardarikeFeature>
     goldCoast: FeatureCollection<PlacesGoldCoastFeature>
     newSweden: FeatureCollection<PlacesNewSwedenFeature>
+    balticCities: FeatureCollection<PlacesBalticCitiesFeature>
   }
   persons: {
     regents: PersonRegent[]
