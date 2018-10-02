@@ -1,7 +1,3 @@
-import {
-  PlacesGoldCoastFeature
-} from './places.goldCoast.types'
-
 const features: PlacesGoldCoastFeature[] = [
   {
     "type": "Feature",

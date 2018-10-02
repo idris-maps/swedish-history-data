@@ -1,5 +1,3 @@
-import { PlacesNewSwedenFeature } from './places.newSweden.types'
-
 const features: PlacesNewSwedenFeature[] = [
   {
     "type": "Feature",

@@ -1,5 +1,3 @@
-import { PersonRegent } from './persons.regents.types'
-
 const data: PersonRegent[] = [
   {
     "name": "Sverker den äldre",
