@@ -4,6 +4,8 @@ import placesGardarikeFeatures from './data/places.gardarike'
 import placesNewSwedenFeatures from './data/places.newSweden'
 import placesGoldCoastFeatures from './data/places.goldCoast'
 import placesBalticCities from './data/places.balticCities'
+import battles from './data/battles'
+import conflicts from './data/conflicts'
 
 // utils
 import toFeatureCollection from './utils/toFeatureCollection'
@@ -17,7 +19,9 @@ const sweHistory: SweHistory = {
   },
   persons: {
     regents: personsRegents,
-  }
+  },
+  battles,
+  conflicts,
 }
 
 export default sweHistory

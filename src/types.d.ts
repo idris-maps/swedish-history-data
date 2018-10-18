@@ -97,6 +97,42 @@ interface PlacesBalticCitiesProperties {
 
 type PlacesBalticCitiesFeature = Feature<PlacesBalticCitiesProperties, PointGeometry>
 
+// battles
+
+interface BattleSide {
+  forces?: string
+  losses?: string
+  parts: WikipediaWithText[]
+}
+
+interface Battle {
+  text: string
+  wikipedia?: Wikipedia
+  partOf: Wikipedia
+  place: WikipediaWithText
+  date: DateObject
+  side1: BattleSide
+  side2: BattleSide
+  result: 0 | 1 | 2
+  coordinates: [number, number]
+}
+
+// conflicts
+
+interface ConflictTreaty extends WikipediaWithText {
+  result: string
+}
+
+interface Conflict {
+  text: string
+  wikipedia: Wikipedia
+  start: DateObject
+  end: DateObject
+  treaties?: ConflictTreaty[]
+  parts: WikipediaWithText[][]
+  casusBelli?: string
+}
+
 // index
 
 interface SweHistory {
@@ -108,5 +144,7 @@ interface SweHistory {
   }
   persons: {
     regents: PersonRegent[]
-  }
+  },
+  battles: Battle[]
+  conflicts: Conflict[]
 }

@@ -109,3 +109,45 @@ type PlacesGardarikeFeature = Feature<PlacesGardarikeProperties, PointGeometry>
 ```
 
 source [wikipedia](https://en.wikipedia.org/wiki/Gar%C3%B0ar%C3%ADki)
+
+### `battles`
+
+An array of JSON objects
+
+```typescript
+interface Battle {
+  text: string
+  wikipedia?: Wikipedia
+  partOf: Wikipedia
+  place: WikipediaWithText
+  date: DateObject
+  side1: {
+    forces?: string
+    losses?: string
+    parts: WikipediaWithText[]
+  }
+  side2: {
+    forces?: string
+    losses?: string
+    parts: WikipediaWithText[]
+  }
+  result: 0 | 1 | 2
+  coordinates: [number, number]
+}
+```
+
+### `conflicts`
+
+An array of JSON objects
+
+```typescript
+interface Conflict {
+  text: string
+  wikipedia: Wikipedia
+  start: DateObject
+  end: DateObject
+  treaties?: ConflictTreaty[]
+  parts: WikipediaWithText[][]
+  casusBelli?: string
+}
+```
