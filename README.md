@@ -151,3 +151,23 @@ interface Conflict {
   casusBelli?: string
 }
 ```
+
+### `geometries.regions`
+
+A GeoJSON FeatureCollection
+
+```typescript
+interface GeometryRegionProperties {
+  name: string
+  swe_from_year?: number
+  swe_from_wikipedia?: Wikipedia
+  swe_to_year?: number
+  swe_to_wikipedia?: Wikipedia
+}
+
+type GeometryRegionFeature = Feature<GeometryRegionProperties, PolygonGeometry|MultiPolygonGeometry>
+```
+
+### `geometries.regionsWithCoastline`
+
+Same as `geometries.regions`, but you can use another coastline precision.
