@@ -5,6 +5,16 @@ interface PointGeometry {
   coordinates: [number, number]
 }
 
+interface PolygonGeometry {
+  type: 'Polygon'
+  coordinates: [number, number][][]
+}
+
+interface MultiPolygonGeometry {
+  type: 'MultiPolygon'
+  coordinates: [number, number][][][]
+}
+
 interface Wikipedia {
   lang: string
   page: string
@@ -133,18 +143,34 @@ interface Conflict {
   casusBelli?: string
 }
 
+// geometries - regions
+
+interface GeometryRegionProperties {
+  name: string
+  swe_from_year?: number
+  swe_from_wikipedia?: Wikipedia
+  swe_to_year?: number
+  swe_to_wikipedia?: Wikipedia
+}
+
+type GeometryRegionFeature = Feature<GeometryRegionProperties, PolygonGeometry|MultiPolygonGeometry>
+
 // index
 
 interface SweHistory {
-  places: {
-    gardaRike: FeatureCollection<PlacesGardarikeFeature>
-    goldCoast: FeatureCollection<PlacesGoldCoastFeature>
-    newSweden: FeatureCollection<PlacesNewSwedenFeature>
-    balticCities: FeatureCollection<PlacesBalticCitiesFeature>
+  battles: Battle[]
+  conflicts: Conflict[]
+  geometries: {
+    regions: FeatureCollection<GeometryRegionFeature>
+    regionsWithoutCoastline: FeatureCollection<GeometryRegionFeature>
   }
   persons: {
     regents: PersonRegent[]
   },
-  battles: Battle[]
-  conflicts: Conflict[]
+  places: {
+    balticCities: FeatureCollection<PlacesBalticCitiesFeature>
+    gardaRike: FeatureCollection<PlacesGardarikeFeature>
+    goldCoast: FeatureCollection<PlacesGoldCoastFeature>
+    newSweden: FeatureCollection<PlacesNewSwedenFeature>
+  }
 }
