@@ -136,6 +136,8 @@ interface Battle {
 }
 ```
 
+source [wikipedia](https://sv.wikipedia.org/wiki/Kategori:Svenska_slag)
+
 ### `conflicts`
 
 An array of JSON objects
@@ -152,6 +154,8 @@ interface Conflict {
 }
 ```
 
+source [wikipedia](https://sv.wikipedia.org/wiki/Lista_%C3%B6ver_svenska_krig)
+
 ### `geometries.regions`
 
 A GeoJSON FeatureCollection
@@ -167,6 +171,8 @@ interface GeometryRegionProperties {
 
 type GeometryRegionFeature = Feature<GeometryRegionProperties, PolygonGeometry|MultiPolygonGeometry>
 ```
+
+sources [wikipedia](https://sv.wikipedia.org) and [OSM](https://www.openstreetmap.org)
 
 ### `geometries.regionsWithoutCoastline`
 
