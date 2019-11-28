@@ -1,7 +1,7 @@
 {
   "name": "swedish-history",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "A collection of datasets related to swedish history",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,10 +9,18 @@
     "build": "tsc && cp src/types.d.ts dist/types.d.ts",
     "prepublish": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "history",
+    "datasets",
+    "sweden"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.1.1"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/idris-maps/swedish-history-data.git"
   }
 }
