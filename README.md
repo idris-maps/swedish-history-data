@@ -168,6 +168,6 @@ interface GeometryRegionProperties {
 type GeometryRegionFeature = Feature<GeometryRegionProperties, PolygonGeometry|MultiPolygonGeometry>
 ```
 
-### `geometries.regionsWithCoastline`
+### `geometries.regionsWithoutCoastline`
 
 Same as `geometries.regions`, but you can use another coastline precision.
