@@ -1,3 +1,5 @@
+import { PersonRegent } from '../types'
+
 const data: PersonRegent[] = [
   {
     "name": "Sverker den äldre",

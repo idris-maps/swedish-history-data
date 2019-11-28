@@ -12,6 +12,11 @@ import geometriesRegionsWithoutCoastline from './data/geometries.regionsWithoutC
 // utils
 import toFeatureCollection from './utils/toFeatureCollection'
 
+// types
+import {
+  SweHistory,
+} from './types'
+
 const sweHistory: SweHistory = {
   battles,
   conflicts,

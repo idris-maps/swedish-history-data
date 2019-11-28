@@ -1,3 +1,5 @@
+import { PlacesGoldCoastFeature } from '../types'
+
 const features: PlacesGoldCoastFeature[] = [
   {
     "type": "Feature",

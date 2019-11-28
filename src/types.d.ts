@@ -1,50 +1,50 @@
 // common
 
-interface PointGeometry {
+export interface PointGeometry {
   type: 'Point'
   coordinates: [number, number]
 }
 
-interface PolygonGeometry {
+export interface PolygonGeometry {
   type: 'Polygon'
   coordinates: [number, number][][]
 }
 
-interface MultiPolygonGeometry {
+export interface MultiPolygonGeometry {
   type: 'MultiPolygon'
   coordinates: [number, number][][][]
 }
 
-interface Wikipedia {
+export interface Wikipedia {
   lang: string
   page: string
 }
 
-interface WikipediaWithText {
+export interface WikipediaWithText {
   text: string
   wikipedia?: Wikipedia
 }
 
-interface DateObject {
+export interface DateObject {
   year: number
   month?: number
   day?: number
 }
 
-interface Feature<Properties, Geometry> {
+export interface Feature<Properties, Geometry> {
   type: 'Feature'
   properties: Properties
   geometry: Geometry
 }
 
-interface FeatureCollection<Feature> {
+export interface FeatureCollection<Feature> {
   type: 'FeatureCollection'
   features: Feature[]
 }
 
 // persons - regents
 
-interface PersonRegent {
+export interface PersonRegent {
   name: string
   wikipedia: Wikipedia
   reignStart: DateObject
@@ -60,7 +60,7 @@ interface PersonRegent {
 
 // places - gardarike
 
-interface PlacesGardarikeProperties {
+export interface PlacesGardarikeProperties {
   name: string
   wikipedia: Wikipedia
 }
@@ -69,7 +69,7 @@ type PlacesGardarikeFeature = Feature<PlacesGardarikeProperties, PointGeometry>
 
 // places - goldcoast
 
-interface PlacesGoldCoastProperties {
+export interface PlacesGoldCoastProperties {
   name: string
   swe_from_year: number
   swe_to_year: number
@@ -79,7 +79,7 @@ type PlacesGoldCoastFeature = Feature<PlacesGoldCoastProperties, PointGeometry>
 
 // places - newsweden
 
-interface PlacesNewSwedenProperties {
+export interface PlacesNewSwedenProperties {
   name: string
   swe_from_year: number
   swe_to_year: number
@@ -89,7 +89,7 @@ type PlacesNewSwedenFeature = Feature<PlacesNewSwedenProperties, PointGeometry>
 
 // places - baltic cities
 
-interface PlacesBalticCitiesProperties {
+export interface PlacesBalticCitiesProperties {
   name: string
   alternativeNames?: {
     fromYear: number
@@ -109,13 +109,13 @@ type PlacesBalticCitiesFeature = Feature<PlacesBalticCitiesProperties, PointGeom
 
 // battles
 
-interface BattleSide {
+export interface BattleSide {
   forces?: string
   losses?: string
   parts: WikipediaWithText[]
 }
 
-interface Battle {
+export interface Battle {
   text: string
   wikipedia?: Wikipedia
   partOf: Wikipedia
@@ -129,11 +129,11 @@ interface Battle {
 
 // conflicts
 
-interface ConflictTreaty extends WikipediaWithText {
+export interface ConflictTreaty extends WikipediaWithText {
   result: string
 }
 
-interface Conflict {
+export interface Conflict {
   text: string
   wikipedia: Wikipedia
   start: DateObject
@@ -145,7 +145,7 @@ interface Conflict {
 
 // geometries - regions
 
-interface GeometryRegionProperties {
+export interface GeometryRegionProperties {
   name: string
   swe_from_year?: number
   swe_from_wikipedia?: Wikipedia
@@ -157,7 +157,7 @@ type GeometryRegionFeature = Feature<GeometryRegionProperties, PolygonGeometry|M
 
 // index
 
-interface SweHistory {
+export interface SweHistory {
   battles: Battle[]
   conflicts: Conflict[]
   geometries: {

@@ -1,3 +1,5 @@
+import { Conflict } from '../types'
+
 const data: Conflict[] = [
   {
     "text": "Gustav Vasas befrielsekrig",

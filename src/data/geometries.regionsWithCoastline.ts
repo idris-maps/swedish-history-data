@@ -1,3 +1,5 @@
+import { GeometryRegionFeature } from '../types'
+
 const data: GeometryRegionFeature[] = [
   {
     "type": "Feature",

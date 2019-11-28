@@ -1,3 +1,5 @@
+import { Battle } from '../types'
+
 const data: Battle[] = [
   {
     "text": "Erövringen av Kalmar",
