@@ -6,8 +6,7 @@ import placesGoldCoastFeatures from './data/places.goldCoast'
 import placesBalticCities from './data/places.balticCities'
 import battles from './data/battles'
 import conflicts from './data/conflicts'
-import geometriesRegions from './data/geometries.regionsWithCoastline'
-import geometriesRegionsWithoutCoastline from './data/geometries.regionsWithoutCoastline'
+import geometriesRegions from './data/geometries.regions'
 
 // utils
 import toFeatureCollection from './utils/toFeatureCollection'
@@ -22,7 +21,6 @@ const sweHistory: SweHistory = {
   conflicts,
   geometries: {
     regions: toFeatureCollection(geometriesRegions),
-    regionsWithoutCoastline: toFeatureCollection(geometriesRegionsWithoutCoastline),
   },
   persons: {
     regents: personsRegents,

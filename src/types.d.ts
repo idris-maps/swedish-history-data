@@ -162,7 +162,6 @@ export interface SweHistory {
   conflicts: Conflict[]
   geometries: {
     regions: FeatureCollection<GeometryRegionFeature>
-    regionsWithoutCoastline: FeatureCollection<GeometryRegionFeature>
   }
   persons: {
     regents: PersonRegent[]

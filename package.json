@@ -1,6 +1,6 @@
 {
   "name": "swedish-history",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A collection of datasets related to swedish history",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

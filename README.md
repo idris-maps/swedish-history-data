@@ -173,7 +173,3 @@ type GeometryRegionFeature = Feature<GeometryRegionProperties, PolygonGeometry|M
 ```
 
 sources [wikipedia](https://sv.wikipedia.org) and [OSM](https://www.openstreetmap.org)
-
-### `geometries.regionsWithoutCoastline`
-
-Same as `geometries.regions`, but you can use another coastline precision.
